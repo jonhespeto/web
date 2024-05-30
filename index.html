@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link type="image/x-icon" href="/fav.ico" rel="shortcut icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><!-- TITLE --></title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noarchive">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 1700px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background-color: #797474;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #666;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    main {
+      padding: 10px;
+    }
+    footer {
+      background-color: #706e6e;
+      color: #fff;
+      padding: 0px;
+      text-align: center;
+      position: fixed; bottom: 0; left: 0;
+      width: 100%;
+    }
+    .gallery {
+      text-align: center;
+    }
+    .gallery a {
+      display: inline-block;
+      margin: 10px;
+    }
+    .gallery img {
+      width: 300px;
+      height: auto;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 10;
+    }
+    .overlay:target {
+      display: block;
+    }
+    .overlay img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" rel="nofollow" onclick="gotoGitHub()">GitHub</a>
+    <a href="#" rel="nofollow" onclick="gotoWhatsApp()">WhatsApp</a>
+    <a href="#" rel="nofollow" onclick="gotoTelegram()">Telegram</a>
+    <a href="#" rel="nofollow" onclick="copyEmailtoClipboard()">Mail</a>
+
+    <script>
+    function gotoGitHub() {
+      event.preventDefault();
+      var encodedUrl = '<!-- CONTENT_1 -->';
+      var decodedUrl = atob(encodedUrl);
+      window.open(decodedUrl, '_blank');
+    }
+    function gotoWhatsApp() {
+      var encodedwhats = '<!-- CONTENT_2 -->';
+      var decodedwhats = atob(encodedwhats);
+      var encodedwhats2 = '<!-- CONTENT_3 -->';
+      var decodedwhats2 = atob(encodedwhats2);
+      var encodedwhats3 = '<!-- CONTENT_4 -->';
+      var decodedwhats3 = atob(encodedwhats3);
+      var encodedwhats4 = '<!-- CONTENT_5 -->';
+      var decodedwhats4 = atob(encodedwhats4);
+      navigator.clipboard.writeText(decodedwhats + decodedwhats2 + decodedwhats3 + decodedwhats4).then(() => {
+    alert("Phone " + decodedwhats + "-" + decodedwhats2 + "-" + decodedwhats3 + "-" + decodedwhats4 + " copied to clipboard");
+      });
+    }
+    function gotoTelegram() {
+      event.preventDefault();
+      var encodedUrl = '<!-- CONTENT_6 -->';
+      var decodedUrl = atob(encodedUrl);
+      window.open(decodedUrl, '_blank');
+    }
+    function copyEmailtoClipboard() {
+      var encodedEmail = '<!-- CONTENT_7 -->';
+      var decodedEmail = atob(encodedEmail);
+      navigator.clipboard.writeText(decodedEmail).then(() => {
+    alert("Email address " + decodedEmail + " copied to clipboard");
+      });
+    }
+    </script>
+
+  </nav>
+  <main class="container">
+    <div class="gallery">
+      <a href="#img1">
+        <img src="image1.jpg">
+      </a>
+      <a href="#img2">
+        <img src="image1.jpg">
+      </a>
+      <a href="#img3">
+        <img src="image1.jpg">
+      </a>
+      <a href="#img4">
+        <img src="image1.jpg">
+      </a>
+      <a href="#img5">
+        <img src="image1.jpg">
+      </a>
+      <a href="#img6">
+        <img src="image1.jpg">
+      </a>
+      <a href="#img7">
+        <img src="image1.jpg">
+      </a>
+    </div>
+  <div class="overlay-container">
+    <div id="img1" class="overlay" onclick="location.href='#';">
+      <img src="image1.jpg">
+    </div>
+
+    <div id="img2" class="overlay" onclick="location.href='#';">
+      <img src="image1.jpg">
+    </div>
+    
+    <div id="img3" class="overlay" onclick="location.href='#';">
+      <img src="image1.jpg">
+    </div>
+        
+    <div id="img4" class="overlay" onclick="location.href='#';">
+      <img src="image1.jpg">
+    </div>
+        
+    <div id="img5" class="overlay" onclick="location.href='#';">
+      <img src="image1.jpg">
+    </div>
+        
+    <div id="img6" class="overlay" onclick="location.href='#';">
+      <img src="image1.jpg">
+    </div>
+
+    <div id="img7" class="overlay" onclick="location.href='#';">
+      <img src="image1.jpg">
+    </div>
+  </div>
+  </main>
+  <footer>
+    <p>&copy; actuality 2024</p>
+  </footer>
+</body>
+</html>
