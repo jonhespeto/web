@@ -61,7 +61,7 @@
       margin: 10px;
     }
     .gallery img {
-      width: 300px;
+      width: 400px;
       height: auto;
       transition: 0.3s;
       cursor: pointer;
@@ -94,6 +94,12 @@
       font-size: 30px;
       text-decoration: none;
       color: white;
+    }
+    .center-text {
+    text-align: center;
+    padding: 30px 20px;
+    margin: 5px 30px;
+    font-size: 30px;
     }
   </style>
 </head>
@@ -137,8 +143,13 @@
     alert("Email address " + decodedEmail + " copied to clipboard");
       });
     }
+    function gotoGIT_pipe(){
+      event.preventDefault();
+      var encodedUrlG = '<!-- CONTENT_8 -->';
+      var decodedUrlG = atob(encodedUrlG);
+      window.open(decodedUrl, '_blank');
+    }
     </script>
-
   </nav>
   <main class="container">
     <div class="gallery">
@@ -192,6 +203,7 @@
     <div id="img7" class="overlay" onclick="location.href='#';">
       <img src="image1.jpg">
     </div>
+    <div class="center-text">Small Jenkins pipeline for this site on <a href="#" rel="nofollow" onclick="gotoGIT_pipe()">github</a>.</div>
   </div>
   </main>
   <footer>
