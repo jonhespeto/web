@@ -12,17 +12,28 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <style>
+    html,
+    body {
+      height: 100%;
+    }
+
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #ebebeb;
       color: #333;
+    }
+
+    .wrapper {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     .container {
       max-width: 1700px;
-      margin: 0 auto;
+      margin: auto;
       padding: 20px;
     }
 
@@ -50,6 +61,7 @@
 
     main {
       padding: 10px;
+      flex: 1 1 auto;
     }
 
     footer {
@@ -57,9 +69,6 @@
       color: #fff;
       padding: 0px;
       text-align: center;
-      position: fixed;
-      bottom: 0;
-      left: 0;
       width: 100%;
     }
 
@@ -115,8 +124,8 @@
 
     .center-text {
       text-align: center;
-      padding: 30px 20px;
-      margin: 5px 30px;
+      padding: 5px 5px;
+      margin: 10x 10px;
       font-size: 30px;
     }
 
@@ -138,127 +147,133 @@
 </head>
 
 <body>
-  <nav>
-    <a href="#" rel="nofollow" onclick="gotoGitHub()">GitHub</a>
-    <a href="#" rel="nofollow" onclick="gotoWhatsApp()">WhatsApp</a>
-    <a href="#" rel="nofollow" onclick="gotoTelegram()">Telegram</a>
-    <a href="#" rel="nofollow" onclick="copyEmailtoClipboard()">Mail</a>
+  <div class="wrapper">
 
-    <script>
-      function gotoGitHub() {
-        var encodedUrl = '<!-- CONTENT_1 -->';
-        var decodedUrl = atob(encodedUrl);
-        window.open(decodedUrl, '_blank');
-      }
-      function gotoWhatsApp() {
-        var encodedwhats = '<!-- CONTENT_2 -->';
-        var decodedwhats = atob(encodedwhats);
-        var encodedwhats2 = '<!-- CONTENT_3 -->';
-        var decodedwhats2 = atob(encodedwhats2);
-        var encodedwhats3 = '<!-- CONTENT_4 -->';
-        var decodedwhats3 = atob(encodedwhats3);
-        var encodedwhats4 = '<!-- CONTENT_5 -->';
-        var decodedwhats4 = atob(encodedwhats4);
-        navigator.clipboard.writeText(decodedwhats + decodedwhats2 + decodedwhats3 + decodedwhats4).then(() => {
-          alert("Phone " + decodedwhats + "-" + decodedwhats2 + "-" + decodedwhats3 + "-" + decodedwhats4 + " copied to clipboard");
-        });
-      }
-      function gotoTelegram() {
-        var encodedUrl = '<!-- CONTENT_6 -->';
-        var decodedUrl = atob(encodedUrl);
-        window.open(decodedUrl, '_blank');
-      }
-      function copyEmailtoClipboard() {
-        var encodedEmail = '<!-- CONTENT_7 -->';
-        var decodedEmail = atob(encodedEmail);
-        navigator.clipboard.writeText(decodedEmail).then(() => {
-          alert("Email address " + decodedEmail + " copied to clipboard");
-        });
-      }
-      function gotoGIT_pipe() {
-        var encodedUrlG = '<!-- CONTENT_8 -->';
-        var decodedUrlG = atob(encodedUrlG);
-        window.open(decodedUrlG, '_blank');
-      }
-    </script>
-  </nav>
-  <main class="container">
-    <div class="gallery">
-      <a href="#img1">
-        <img src="image1.jpg">
-      </a>
-      <a href="#img2">
-        <img src="image2.jpg">
-      </a>
-      <a href="#img3">
-        <img src="image3.jpg">
-      </a>
-      <a href="#img4">
-        <img src="image4.jpg">
-      </a>
-      <a href="#img5">
-        <img src="image5.jpg">
-      </a>
-      <a href="#img6">
-        <img src="image6.jpg">
-      </a>
-      <a href="#img7">
-        <img src="image7.jpg">
-      </a>
-      <a href="#img8">
-        <img src="image8.jpg">
-      </a>
-      <a href="#img9">
-        <img src="image9.jpg">
-      </a>
-      <a href="#img10">
-        <img src="image10.jpg">
-      </a>
-    </div>
-    <div class="overlay-container">
-      <div id="img1" class="overlay" onclick="location.href='#';">
-        <img src="image1.jpg">
-      </div>
+    <nav>
+      <a href="#" rel="nofollow" onclick="gotoGitHub()">GitHub</a>
+      <a href="#" rel="nofollow" onclick="gotoWhatsApp()">WhatsApp</a>
+      <a href="#" rel="nofollow" onclick="gotoTelegram()">Telegram</a>
+      <a href="#" rel="nofollow" onclick="copyEmailtoClipboard()">Mail</a>
 
-      <div id="img2" class="overlay" onclick="location.href='#';">
-        <img src="image2.jpg">
+      <script>
+        function gotoGitHub() {
+          var encodedUrl = '<!-- CONTENT_1 -->';
+          var decodedUrl = atob(encodedUrl);
+          window.open(decodedUrl, '_blank');
+        }
+        function gotoWhatsApp() {
+          var encodedwhats = '<!-- CONTENT_2 -->';
+          var decodedwhats = atob(encodedwhats);
+          var encodedwhats2 = '<!-- CONTENT_3 -->';
+          var decodedwhats2 = atob(encodedwhats2);
+          var encodedwhats3 = '<!-- CONTENT_4 -->';
+          var decodedwhats3 = atob(encodedwhats3);
+          var encodedwhats4 = '<!-- CONTENT_5 -->';
+          var decodedwhats4 = atob(encodedwhats4);
+          navigator.clipboard.writeText(decodedwhats + decodedwhats2 + decodedwhats3 + decodedwhats4).then(() => {
+            alert("Phone " + decodedwhats + "-" + decodedwhats2 + "-" + decodedwhats3 + "-" + decodedwhats4 + " copied to clipboard");
+          });
+        }
+        function gotoTelegram() {
+          var encodedUrl = '<!-- CONTENT_6 -->';
+          var decodedUrl = atob(encodedUrl);
+          window.open(decodedUrl, '_blank');
+        }
+        function copyEmailtoClipboard() {
+          var encodedEmail = '<!-- CONTENT_7 -->';
+          var decodedEmail = atob(encodedEmail);
+          navigator.clipboard.writeText(decodedEmail).then(() => {
+            alert("Email address " + decodedEmail + " copied to clipboard");
+          });
+        }
+        function gotoGIT_pipe() {
+          var encodedUrlG = '<!-- CONTENT_8 -->';
+          var decodedUrlG = atob(encodedUrlG);
+          window.open(decodedUrlG, '_blank');
+        }
+      </script>
+    </nav>
+    <main class="container">
+      <div class="center-text">Small Jenkins pipeline for this site on <a href="#" rel="nofollow"
+          onclick="gotoGIT_pipe()">github</a>.</div>
+      <div class="gallery">
+        <a href="#img1">
+          <img src="small_image1.jpg">
+        </a>
+        <a href="#img2">
+          <img src="small_image2.jpg">
+        </a>
+        <a href="#img3">
+          <img src="small_image3.jpg">
+        </a>
+        <a href="#img4">
+          <img src="small_image4.jpg">
+        </a>
+        <a href="#img5">
+          <img src="small_image5.jpg">
+        </a>
+        <a href="#img6">
+          <img src="small_image6.jpg">
+        </a>
+        <a href="#img7">
+          <img src="small_image7.jpg">
+        </a>
+        <a href="#img8">
+          <img src="small_image8.jpg">
+        </a>
+        <a href="#img9">
+          <img src="small_image9.jpg">
+        </a>
+        <a href="#img10">
+          <img src="small_image10.jpg">
+        </a>
       </div>
+      <div class="overlay-container">
+        <div id="img1" class="overlay" onclick="location.href='#';">
+          <img loading="lazy" src="image1.jpg">
+        </div>
 
-      <div id="img3" class="overlay" onclick="location.href='#';">
-        <img src="image3.jpg">
-      </div>
+        <div id="img2" class="overlay" onclick="location.href='#';">
+          <img loading="lazy" src="image2.jpg">
+        </div>
 
-      <div id="img4" class="overlay" onclick="location.href='#';">
-        <img src="image4.jpg">
-      </div>
+        <div id="img3" class="overlay" onclick="location.href='#';">
+          <img loading="lazy" src="image3.jpg">
+        </div>
 
-      <div id="img5" class="overlay" onclick="location.href='#';">
-        <img src="image5.jpg">
-      </div>
+        <div id="img4" class="overlay" onclick="location.href='#';">
+          <img loading="lazy" src="image4.jpg">
+        </div>
 
-      <div id="img6" class="overlay" onclick="location.href='#';">
-        <img src="image6.jpg">
-      </div>
+        <div id="img5" class="overlay" onclick="location.href='#';">
+          <img loading="lazy" src="image5.jpg">
+        </div>
 
-      <div id="img7" class="overlay" onclick="location.href='#';">
-        <img src="image7.jpg">
+        <div id="img6" class="overlay" onclick="location.href='#';">
+          <img loading="lazy" src="image6.jpg">
+        </div>
+
+        <div id="img7" class="overlay" onclick="location.href='#';">
+          <img loading="lazy" src="image7.jpg">
+        </div>
+
+        <div id="img8" class="overlay" onclick="location.href='#';">
+          <img loading="lazy" src="image8.jpg">
+        </div>
+
+        <div id="img9" class="overlay" onclick="location.href='#';">
+          <img loading="lazy" src="image9.jpg">
+        </div>
+
+        <div id="img10" class="overlay" onclick="location.href='#';">
+          <img loading="lazy" src="image10.jpg">
+        </div>
       </div>
-      <div id="img8" class="overlay" onclick="location.href='#';">
-        <img src="image8.jpg">
-      </div>
-      <div id="img9" class="overlay" onclick="location.href='#';">
-        <img src="image9.jpg">
-      </div>
-      <div id="img10" class="overlay" onclick="location.href='#';">
-        <img src="image10.jpg">
-      </div>
-    </div>
-    <div class="center-text">Small Jenkins pipeline for this site on <a href="#" rel="nofollow"
-        onclick="gotoGIT_pipe()">github</a>.</div>
-  </main>
-  <footer>
-    <p>&copy; actuality 2024</p>
-  </footer>
+    </main>
+    <footer>
+      <p>&copy; actuality 2024</p>
+    </footer>
+  </div>
 </body>
 
 </html>
